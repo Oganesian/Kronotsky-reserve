@@ -1,0 +1,698 @@
+/* Содержание */
+body{
+	background: #f3f3f3;								/* Цвет фона главной страницы */
+	font-family: "Trebuchet MS", Arial, "Times New Roman", "PTSans", "Helvetica Neue", Helvetica, sans-serif;	/* Шрифт */
+	margin: 0;											/* Убрать отступы */
+}
+::selection{				/* Выделение текста*/
+	color: white;			/* Цвет текста */
+	background: rgba(205, 92, 92, 0.8);	/* Цвет фона */
+}
+h1{						/* Заголовки h1 */
+	text-align: center; 	/* Заголовки по центру */
+	color: #85a3b8;
+}
+h2{						/* Заголовки h2 */
+	margin-left: 3%;	/* Заголовки с отступом */
+	color: #85a3b8;
+}
+img{
+	border-radius: 10px;
+}
+/*======================*/
+/* 		Блок header		*/
+/*======================*/
+#header.bd{				/* Класс .bd в блоке header */
+	font-size: 36px;	/* Размер шрифта */
+	text-align: center; /* Выравнивание текста по центру */
+	color: #fff; 		/* Цвет текста - белый */
+}
+#header:hover, #bigger:hover, #smaller:hover, .teaser img:hover{ 		 	/* При наведении на блок header */
+	cursor: pointer; 	/* Стиль курсора */
+}
+#header{ 								  /* Блок header */
+	width: 95%; 						  /* Ширина блока */
+	margin: auto; 						  /* Выравнивание блока */
+	margin-bottom: 3px; 				  /* Нижний отступ */
+	min-height: 155px; 					  /* Минимальная высота */
+	background: url("../img/header.jpg"); /* Фоновая картинка */
+}
+/*======================*/
+/* 	Блок navigation		*/
+/*======================*/
+#navigation{ 				   /* Блок navigation */
+	width: 99.9%; 			   /* Ширина блока */
+	min-height: 40px; 		   /* Минимальная высота блока */
+	background: url("../img/header.jpg");
+	/*background-color: rgb(63, 165, 1f79); /* Цвет фона */
+}
+#navigation-c{ 				   /* Контейнер для блока navigation */
+	margin: auto; 			   /* Выравнивание */
+	width: 95%; 			   /* Ширина контейнера */
+}
+
+#navbar ul {					/* Списoк внутри списка */
+	transition: all ease 350ms;	/* Плавный эффект */
+	display: none;				/* Не отображать */
+	border: 1px solid #666;	/* Границы */
+	background-color: rgba(0,0,0,0.5);	/* Цвет фона */
+	position: absolute;			/* Абсолютное позиционирование */
+	z-index: 1;					/* Индекс перекрытия других элементов страницы */
+	width: auto;
+	font-weight: normal;
+}
+
+#navbar ul li:not(.lastli){				/* Список внутри списка */
+	border-bottom: 1px solid white;	/* Нижния граница */
+}
+#navbar ul li .active{	/* Активный элемент в списке */
+	height: auto;		/* Высота */
+	border-bottom: 0px;
+}
+#navbar li:hover ul {			/* При наведение на элемент списка */
+	display: block;				/* Показать список, находящийся внутри родительского списка */
+}
+#navbar, #navbar ul {		/* Список navbar и список внутри него */
+	margin: 0;				/* Границы */
+	padding: 0;				/* Отступы */
+	list-style-type: none;	/* Вид маркера */
+}
+#navbar li {				/* Элементы списка navbar */
+	float: left;			/* Выравнивание по левому краю */
+	position: relative;		/* Относительное позиционаривание */
+	text-indent: 0px;		/* Отступ текста */
+}
+#navbar li a{ 					/* Ссылки внутри списка navbar */
+	transition: all ease 350ms; /* Плавный эффект */
+}
+#big{					/* id big */
+	font-size: 14px;	/* Размер текста */
+}
+#bigA{
+	display: block; 			/* Отобразить элемент */
+	padding: 7px 16px;			/* Отступы */
+	color: white; 				/* Цвет текста */
+	text-decoration: none; 		/* Выключить подчёркивание текста */
+	text-align: center; 		/* Выравнивание текста */
+	font-size: 14px;
+}
+#navbar li:not(#big){	/* Элемент списка */		
+	font-size: 16px; 	/* Размер текста */
+}
+#navbar li a:hover:not(.active):not(#big) { 	/* При наведении на ссылку внутри списка navbar */
+	background-color: rgba(255,255,255,0.5);			/* Цвет фона */
+}
+#navbar li a:not(.active):not(#bigA) { 	/* Ссылки внутри списка navbar */
+	display: block; 					/* Отобразить элемент */
+	padding: 7px 16px;					/* Отступы */
+	color: white; 						/* Цвет текста */
+	height: 26px; 						/* Высота */
+	text-decoration: none; 				/* Выключить подчёркивание текста */
+	text-align: center; 				/* Выравнивание текста */
+}
+#navbar ul li {  /* Элементы списка внутри списка navbar */
+	float: none; /* Выравнивание */
+}
+.active{ 		  			   					/* Активный элемент */
+	height: 26px; 			   					/* Высота */
+	font-size: 16px; 							/* Размер текста */
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+
+}
+/*======================*/
+/* 		Блок content	*/
+/*======================*/
+#main{ 											/* Блок main */
+	margin-top: 5px; 							/* Верхний отступ */
+	padding-top: 20px; 							/* Верхний отступ */
+	float: left; 								/* Выравнивание */
+	transition: all ease 1s; 					/* Эффект плавности */
+	margin-left: 16.5%; 						/* Левый отступ */
+	width: 81%; 								/* Ширина */
+	height: 810px; 								/* Высота */
+	overflow: auto; 							/* Добавить скроллинг */
+	word-wrap: break-word;
+	font-size: 16px;
+}
+#main:not(#markered>p){
+	list-style-image: url("../img/tick.png"); 	/* Установить маркер для списка */
+}
+.teaser{
+	width: 610px;
+	height: 210px;
+	margin-left: 20px;
+	border-top: 2px solid #7590a3;
+	display: inline-block;
+}
+.teaser-img{
+	float: left;
+	width: 350px;
+	height: 200px;
+}
+.teaser-text{
+	width: 250px;
+	height: 200px;
+	float: right;
+}
+.teaser-text a{
+	font-size: 18px;
+}
+.teaser-text p{
+	font-size: 14px;
+}
+.teaser-text ul{
+	font-size: 14px;
+	list-style-image: none;
+	padding-left: 10px;
+	margin-left: 2%;
+}
+.post-type {
+  text-transform: uppercase;
+  padding: 6px 8px 5px;
+  background: #7590a3;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 100% 10px 0;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.mainP{ 				/* Класс для тега <p> */
+	line-height: 1.5; 	/* Межстрочный интервал */
+	margin-left: 3%; 	/* Левый отступ */
+	margin-right: 3%; 	/* Правый отступ */
+}
+.formP{ 				/* Класс для тега <form> */
+	margin-left: 4.0%; 	/* Левый отступ */
+	height: 10px; 		/* Высота */
+	font-size: 18px; 	/* Размер текста */
+	color: #666; 		/* Цвет текста */
+	font-weight: bold; 	/* Полужирный текст */
+}
+#sidebar{ 								/* Блок sidebar */
+	margin: 0; 							/* Отступ */
+	width: 14%; 						/* Ширина */
+	height: 850px; 						/* Высота */
+	position: absolute; 				/* Абсолютное позиционирование */
+	margin-left: 2.5%; 					/* Левый отступ */
+	border-right: 1px solid #666; 	/* Правая граница */
+	border-left: 1px solid #666; 	/* Левая граница */
+}
+#sidebar hr{ 			/* Горизонтальная полоса */
+	color: #666; 	/* Цвет */
+	height: 1px; 		/* Высота */
+	border: none; 		/* Границы */
+}
+.sliderbutton{ 						/* Кнопка смены картинки */
+	background: black; 				/* Цвет фона */
+	opacity: 0.2; 					/* Прозрачность */
+	width: 100px; 					/* Ширина */
+	margin-bottom: 15px; 			/* Нижный отступ */
+	height: 724px; 					/* Высота */
+	transition: all ease 500ms; 	/* Эффект плавности */
+	z-index: 1; 					/* Перекрывать другие элементы страницы */
+	position: absolute; 			/* Абсолютное позиционирование */
+	cursor: pointer; 				/* Стиль курсора */
+}
+.sliderbutton img{ 			/* Картинка внутри кнопки */
+	padding: 315px 11px; 	/* Отступы */
+	width: 75px; 			/* Ширина */
+	height: 75px; 			/* Высота */
+}
+.sliderbutton:hover{ 		/* При наведении на кнопку */
+	opacity: 0.8; 			/* Прозрачность */
+}
+#prev{ 									/* id для кнопки */
+	border-top-left-radius: 19px; 		/* Закругление верхнего левого угла */
+	border-bottom-left-radius: 19px; 	/* Закругление нижнего левого угла */
+	float: left; 						/* Выравнивание */
+}
+#next{ 									/* id для кнопки */
+	margin-left: 56.5%; 				/* Левый отступ */
+	border-top-right-radius: 19px; 		/* Закругление верхнего правого угла */
+	border-bottom-right-radius: 19px; 	/* Закругление нижнего правого угла */
+}
+.modal{ 									/* Класс для модального окна */
+	display: none; 							/* Не отображать элемент */
+	position: fixed; 						/* Фиксированная позиция */
+	z-index: 1; 							/* Перекрывать другие элементы страницы */
+	left: 0; 								/* Расстояние от левого края */
+	top: 0; 								/* Расстояние от верхнего края */
+	width: 100%; 							/* Ширина */
+	height: 100%; 							/* Высота */
+	overflow: auto; 						/* Добавить скроллинг */
+	background-color: rgba(0, 0, 0, 0.7); 	/* Цвет фона */
+}
+.modal-inside{ 					/* Класс для содержимого модального окна */
+	display: none; 				/* Не отображать элемент */
+	margin: 20% auto; 			/* Отступ */
+	border: 2px solid #888; 	/* Границы */
+	width: 50%; 				/* Ширина */
+	height: 13%; 				/* Высота */
+	border-radius: 10px;		/* Радиус закругления углов */
+}
+.modal-picture{ 				/* Класс для картинки внутри модального окна */
+	display: none; 				/* Не отображать элемент */
+	margin: 6% 21%; 			/* Отступы */
+}
+.modal-picture img{ 		/* Картинки внутри класса */
+	border-radius: 20px; 	/* Радиус закругления углов */
+	position: absolute; 	/* Абсолютное позиционирование */
+}
+#mdl{ 					/* id для параграфа */
+	line-height: 1.5; 	/* Межстрочный интервал */
+	padding-top: 15px; 	/* Верхний отступ */
+	text-align: center; /* Выравнивание текста */
+	font-size: 22px; 	/* Размер текста */
+	font-weight: bold; 	/* Полужирный текст */
+	color: white; 		/* Цвет текста */
+}
+
+#clickable{ 		/* id для картинки */
+	width: 1100px; 	/* Ширина */
+	height: 724px; 	/* Высота */
+}
+.close{ 					/* Класс для кнопки "закрыть" */
+	padding-right: 10px; 	/* Правый отступ */
+	z-index: 1; 			/* Перекрывать другие элементы страницы */
+	color: #aaa; 			/* Цвет текста */
+	float: right; 			/* Выравнивание */
+	font-size: 28px; 		/* Размер текста */
+	font-weight: bold; 		/* Полужирный текст */
+}
+.close:hover{ 			/* При наведении на кнопку */
+	cursor: pointer;	/* Стиль курсора */
+	color: red; 		/* Цвет текста */
+}
+.close1{								/* Класс для кнопки "закрыть" */
+	border-bottom-right-radius: 20px; 	/* Закругление нижнего правого угла */
+	border-bottom-left-radius: 20px; 	/* Закругление нижнего левого угла */
+	background: black; 					/* Цвет фона */
+	opacity: 0.4; 						/* Прозрачность */
+	z-index: 1; 						/* Перекрывать другие элементы страницы */
+	color: red; 						/* Цвет текста */
+	width: 80px; 						/* Ширина */
+	height: 70px;						/* Высота */
+	float: right;						/* Выравнивание */
+	font-size: 50px; 					/* Размер текста */
+	font-weight: bold; 					/* Полужирный текст */
+	text-align: center; 				/* Выравнивание текста */
+	transition: all ease 500ms; 		/* Эффект плавности */
+}
+.close1:hover{ 			/* При наведении на кнопку */
+	cursor: pointer; 	/* Стиль курсора */
+	opacity: 0.8; 		/* Прозрачность */
+}
+.inputTxt{ 					/* Класс для формы ввода текста */
+	width: 197px; 			/* Ширина */
+	height: 25px; 			/* Высота */
+	font-size: 15px; 		/* Размер текста */
+	margin-left: 4%; 		/* Левый отступ */
+	border-radius: 10px; 	/* Радиус закругления углов */
+	border-width: 1px; 		/* Ширина границы */
+	border-style: solid; 	/* Стиль границы */
+	border-color: #6A5ACD; 	/* Цвет границы */
+	text-indent: 8px; 		/* Отступ текста */
+	color: gray; 			/* Цвет текста */
+}
+.inputTxt:focus, #agr:focus, #fontBtn:focus{ 	/* Когда фокус на форме ввода текста или кнопке с id=agr */
+	outline: none; 				/* Не отображать границ */
+}
+#datetime{ 					/* id для блока с часами или временем */
+	width: 80%;				/* Ширина */
+	margin-right: 2.5%; 	/* Правый отступ */
+	margin: auto; 			/* Отступ */
+	font-size: 20px; 		/* Размер текста */
+	color: #666; 			/* Цвет текста */
+}
+#photoalbum{ 		/* id для таблицы */
+	margin: auto; 	/* Отступ */
+}
+#photoalbum td{ 	/* Элементы таблицы c id photoalbum */
+	padding: 10px; 	/* Отступы */
+}
+#address{ 					/* id для картинки */
+	width: 243px; 			/* Ширина */
+	height: 160px; 			/* Высота */
+	cursor: pointer; 		/* Стиль курсора */
+}
+#date{ 					/* id для даты */
+	margin-left: 0%; 	/* Левый отступ */
+	line-height: 0; 	/* Высота */
+}
+.active, .datetime { 		/* Класс активного элемента и класс даты-времени */
+	display: block; 		/* Отобразить элемент */
+	padding: 7px 16px; 		/* Отступы */
+	text-decoration: none; 	/* Выключить подчёркивание текста */
+	text-align: center; 	/* Выравнивание текста */
+}
+.datetime{ 							/* Класс даты-времени */
+	border-radius: 20px;			/* Радиус закругления углов */
+	transition: all ease 500ms; 	/* Эффект плавности */
+	margin-left: auto; 				/* Левый отступ */
+	color: #CD5C5C; 				/* Цвет текста */
+	border: 1px solid #CD5C5C; 		/* Границы */
+}
+#date1{ 				/* id для даты */
+	font-size: 18px; 	/* Размер текста */
+}
+#time1{ 				/* id для часов */
+	margin-top: 30px; 	/* Верхний отступ */
+	font-size: 20px; 	/* Размер текста */
+}
+#settings{
+	transition: all ease 500ms;
+	display: none;
+	width: 600px;
+	height: 0px;
+	/*background-color: rgba(255,255,255,0.8);*/
+	background-color: rgba(243,243,243, 0.9);
+	position: absolute;
+	border-radius: 20px;
+	border: 1px solid #666;
+	overflow: hidden;
+	z-index: 11;
+}
+#settings p{
+	font-size: 20px;
+}
+#fontM{
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+#fontsize{
+	width: 200px;
+	float: left;
+}
+#fontstyle{
+	width: 400px;
+	margin-bottom: 30px;
+	float: left;
+}
+.def{
+	margin-left: 35%;
+}
+#left{
+	margin: 5px 10%;
+	display: inline;
+}
+#righ{
+	margin: 0px 150px;
+	display: inline;
+}
+#fontM:hover{
+	cursor: pointer;
+}
+.bd{ 					/* Класс для текста внутри блока content */
+	font-size: 24px; 	/* Размер текста */
+	font-weight: bold; 	/* Полужирный текст */
+	color: #666; 		/* Цвет текста */
+}
+.hr{ 					/*id для ссылок */
+	color: #CD5C5C; 	/* цвет ссылок - красный */ 
+}
+.w3{ 						/* Класс для картинок */
+	width: 460px; 			/* Ширина */
+	height: 294px; 			/* Высота */
+	border-radius: 10px; 	/* Радиус закругления углов */
+	margin-left: 2.5%; 		/* Левый отступ */
+	cursor: pointer; 		/* Стиль курсора */
+}
+.caption-style-4{				/* Класс для списка */
+	list-style-type: none;		/* Стиль маркера списка */
+	margin: 0px;				/* Отступы */
+	padding: 0px;				/* Отступы */
+	}
+.caption-style-4 li{		/* Элемент списка */	
+	float: left;			/* Выравнивание по левому краю */
+	padding: 0px;			/* Отступы */
+	position: relative;		/* Относительное выравнивание */
+	overflow: hidden;		/* Скрыть элементы, выходящие за границу */
+}
+.caption-style-4 li:hover .caption{		/* Наведение на элемент списка */
+	opacity: 1;							/* Непрозрачность */
+}	
+.caption-style-4 li:hover img{				/* При наведении на картинку внутри элемента списка */
+	opacity: 1;								/* Непрозрачность */
+	transform: scale(1.15,1.15);			/* Затемнение */
+	-webkit-transform:scale(1.15,1.15);		/* Затемнение */
+	-moz-transform:scale(1.15,1.15);		/* Затемнение */
+	-ms-transform:scale(1.15,1.15);			/* Затемнение */
+	-o-transform:scale(1.15,1.15);			/* Затемнение */
+}
+.caption-style-4 img{		/* Картинки внутри элемента списка */
+	margin: 0px;			/* Отступы */
+	padding: 0px;			/* Отступы */
+	float: left;			/* Выравнивание по левому краю */
+	z-index: 4;				/* Индекс перекрытия других элементов страницы */
+}
+.caption-style-4 .caption{						/* Класс для списка, класс для надписи */
+	cursor: pointer;							/* Стиль мыши */
+	position: absolute;							/* Абсолютное позиционирование */
+	opacity: 0.4;								/* Непрозрачность */
+	-webkit-transition:all 0.7s ease-in-out;	/* Эффект затемнения */
+	-moz-transition:all 0.7s ease-in-out;		/* Эффект затемнения */
+	-o-transition:all 0.7s ease-in-out;			/* Эффект затемнения */
+	-ms-transition:all 0.7s ease-in-out;		/* Эффект затемнения */
+	transition:all 0.7s ease-in-out;			/* Эффект затемнения */
+}
+.caption-style-4 img{								/* Картинки внутри класса для списка */
+	-webkit-transition:all 0.50s ease-in-out;		/* Эффект затемнения */	
+	-moz-transition:all 0.50s ease-in-out;			/* Эффект затемнения */
+	-o-transition:all 0.50s ease-in-out;			/* Эффект затемнения */
+	-ms-transition:all 0.50s ease-in-out;			/* Эффект затемнения */
+	transition:all 0.50s ease-in-out;				/* Эффект затемнения */
+}
+.caption-style-4 .blur{						/* Класс наложения */
+	background-color: rgba(0,0,0,0.65);		/* Цвет фона */
+	width: 500px;
+	height: 350px;
+	z-index: 5;								/* Индекс перекрытия других элементов страницы */
+	position: absolute;						/* Абсолютное позиционирование */
+	border-radius: 10px;
+}
+.caption-style-4 .caption-text h1{		/* Заголовки внутри классов */
+	text-transform: uppercase;			/* В верхнем регистре */
+	font-size: 24px;					/* Размер шрифта */
+	border: 1px solid white;
+	color: white;						/* Цвет текста */
+	padding: 145px 149px;
+	margin-left: 18px;					/* Отступы */
+}
+.caption-style-4 .caption-text{		/* Класс для надписи */
+	z-index: 10;					/* Индекс перекрытия других элементов страницы */
+	color: #fff;					/* Цвет текста */
+	position: absolute;				/* Абсолютное позиционирование */
+	text-align: center;				/* Выравнивание текста */
+}
+.container-a4{					/* Контейнер */
+	float: right;				/* Выравнивание */
+	margin-top: 5px;			/* Отступ */
+	margin-left: 10px;			/* Отступ */
+	margin-right: 10px;			/* Отступ */
+	width: 500px;
+	height: 350px;
+	list-style-image: none;		/* Убрать картинку-маркер */
+}
+.container-a4 img{		/* Картинки внутри контейнера */
+	width: 500px;
+	height: 350px;
+}
+#wiki, #exc{						/* id для картинки */
+	float: right;			/* Выравнивание */
+	margin-top: 18px;		/* Отступ */
+	margin-left: 10px;		/* Отступ */
+	margin-right: 10px;		/* Отступ */
+}
+#exc{						/* id для картинки */
+	width: 400px;
+	height: 300px;
+	border-radius: 20px;
+}
+#minimap h1{				/* Заголовок */
+	padding: 49px 64px;		/* Отступы */
+}			
+#minimap{					/* id для карты */
+	height: 160px;			/* Высота */
+	width: 230px;			/* Ширина */
+}
+#bigger, #smaller{
+	width: 100px;
+	height: 100px;
+}
+#bigger{
+	margin-left: 40%;
+	opacity: 1;
+}
+#smaller{
+	margin-left: 20px;
+	opacity: 0.5;
+}
+#map{
+	width: 653px;
+	height: 517px;
+	margin-left: 23%;
+}
+button.accordion{				/* Кнопка класса accordion */
+	font-size: 18px;			/* Размер текста */
+	background-color: #eee;		/* Цвет фона */
+	color: #444;				/* Цвет текста */
+	cursor: pointer;			/* Курсор */
+	padding: 12px;				/* Отступы */
+	width: 99.8%;				/* Ширина */
+	text-align: left;			/* Выравнивание текста */
+	border: none;				/* Границы */
+	outline: none;				/* Внешняя грацица */
+	transition: 0.5s;			/* Замедленный эффект */
+	margin-left: 2px;
+}
+#excurse{
+	background-image: url("../img/header.jpg");
+	opacity: 0.8;
+	font-size: 22px;							/* Размер текста */
+	font-variant: small-caps;
+	color: white;								/* Цвет текста */
+	border: 1px solid #666;
+}
+#excurse:hover{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+button.accordion.activated,
+button.accordion:hover:not(#excurse){			/* При наведении */
+	background-color: #ddd;		/* Цвет фона */
+}	
+button.accordion:after {
+    content: '\02795'; 
+    font-size: 13px;
+    float: right;
+}
+button.accordion.activated:after {
+    content: "\2796"; 
+}
+div.panel{						/* Внутренняя часть */
+	padding: 0 18px;			/* Отступы */
+	background-color: white;	/* Цвет фона */
+	display: none;				/* Не отображать */
+}
+div.panel.show{					/* Внутренняя часть */
+	display: block;				/* Отобразить */
+	color: #666;				/* Цвет текста */
+	background: #f3f3f3;		/* Цвет фона */
+	padding: 10px 50px;			/* Отступы */
+}
+.panel a{					/* Ссылки */
+	padding-top: 10px;		/* Отступ сверху */
+}
+.marked{
+	margin-left: 2%;
+}
+.hr2, #markered a{								/* Класс для ссылок */
+  text-decoration: none;			/* Не подчеркивать ссылки */
+  display: inline-block;			/* Отобразить */
+  position: relative;				/* Относительное позиционирование */
+  padding: 6px 0 3px 0;				/* Отступы */
+  color: rgba(205, 92, 92, 0.8);	/* Цвет текста */
+  border-bottom: 1px dotted rgba(205, 92, 92, 0.8);
+  list-style-image: none;
+}
+#markered{
+	display: block;
+}
+#accords{
+	display: none;
+}
+/*======================*/
+/* 		Блок footer		*/
+/*======================*/
+#footer-c{ 				/* Контейнер для блока footer */
+	padding-top: 15px; 	/* Верхний отступ */
+	margin: auto; 		/* Отступ */
+	width: 100%; 		/* Ширина */
+}
+#footer{ 							/* Блок footer */
+	width: 100%; 					/* Ширина */
+	min-height: 100px; 				/* Высота */
+	border-top: 1px solid #666; 	/* Верхная граница */
+	font-size: 15px; 				/* Размер текста */
+	text-align: center; 			/* Выравнивание текста */
+	color: #6A5ACD; 				/* Цвет текста */
+}
+#footer-left{ 				/* id для левой части блока footer */
+	padding-top: 10px; 		/* Верхний отступ */
+	width: 20%; 			/* Ширина */
+	float: left; 			/* Выравнивание */
+	padding-left: 40px; 	/* Левый отступ */
+	text-align: left; 		/* Выравнивание текста */
+}
+#footer-center{ 		/* id для центральной части блока footer */
+	padding-top: 10px; 	/* Верхний отступ */
+	width: 60%; 		/* Ширина */
+	float: left; 		/* Выравнивание */
+}
+#footer-right{ 			/* id для правой части блока footer */
+	padding-top: 10px; 	/* Верхний отступ */
+	width: 10%; 		/* Ширина */
+	float: right; 		/* Выравнивание */
+}
+#ecology{ 			/* id для картинки */
+	width: 200px; 	/* Ширина */
+	height: 80px; 	/* Высота */
+}
+#footer a{ 					/* Ссылки внутри блока footer */
+	cursor: pointer; 		/* Стиль курсора */
+	text-decoration: none; 	/* Выключить подчёркивание текста */
+	color: #CD5C5C; 		/* Цвет текста */
+}
+#footer a:visited{ 		/* Нажатые ссылки */
+	color: #CD5C5C; 	/* Цвет текста */
+}
+#link{ 				/* id для ссылки */
+	width: 13px; 	/* Ширина */
+	height: 13px; 	/* Высота */
+}
+#metrika{					/* id для картинки */
+	width: 114px; 			/* Ширина */
+	height: 40px; 			/* Высота */
+	padding-top: 20px; 		/* Верхний отступ */
+}
+/*======================*/
+/* 		  Прочее		*/
+/*======================*/
+#clear { 			/* id для блока */
+	clear: both; 	/* Запрет обтекания */
+}
+#agr, #fontBtn{ 								/* id для кнопки */
+	height: 35px; 					/* Высота */
+	color: #6A5ACD; 				/* Цвет текста */
+	font-size: 18px; 				/* Размер текста */
+}
+#fontBtn{
+	transition: all ease 200ms; 	/* Эффект плавности */
+	position: relative;
+	margin-top: 15px;
+	background-color: rgb(57, 177, 71);
+	color: white;
+	border-radius: 40px;
+	font-size: 22px;
+	border-color: rgb(57, 177, 71);
+}
+#agr{
+	border-radius: 10px;
+	position: relative; 			/* Относительное позиционирование */
+	margin-left: 4%; 				/* Левый отступ */
+	border: 1px solid #6A5ACD; 		/* Границы */
+	margin-bottom: 10px; 			/* Нижний отступ */
+	transition: all ease 500ms; 	/* Эффект плавности */
+	background-color: rgba(0,0,0,0);
+}
+#fontBtn:hover{
+	cursor: pointer;
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#agr:hover{ 					/* При наведении на кнопку */
+	border: 1px solid #CD5C5C;	/* Границы */
+	color: #CD5C5C; 			/* Цвет текста */
+	cursor: pointer; 			/* Стиль курсора */
+}

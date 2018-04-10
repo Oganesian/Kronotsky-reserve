@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Макет (16)</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/script.js" type="text/javascript"></script>
+</head>
+<body onload="init()">
+<div id="chief">
+		<div id="header" class="bd" onclick="page(1)"><br>Кроноцкий заповедник</div>
+	<div id="navigation-c" class="bd">
+		<div id="navigation">
+			<ul id="navbar">
+				<li>
+					<a href="#" onclick="settings()">Настройки</a>
+					<div id="settings">
+						<span class="close" onclick="settings()">&times;</span>
+						<p id="left">Размер</p>
+						<p id="righ">Шрифт</p><br>
+						<div id="fontsize">
+						<img src="../img/Aminus.png" onclick="fontSize(0)" id="fontM">
+						<img src="../img/Aplus.png" onclick="fontSize(1)" id="fontM">
+						</div>
+						<div id="fontstyle">
+						<button id="fontBtn" onclick="fontStyle(1)">Arial</button>
+						<button id="fontBtn" onclick="fontStyle(2)">Times New Roman</button>
+						<button id="fontBtn" onclick="fontStyle(3)">Helvetica</button>
+						</div>
+						<button id="fontBtn" class="def" onclick="defaultt()">По умолчанию</button>
+					</div>
+				</li>
+				<li><a href="../../index.html">Главная</a></li>
+				<li>
+					<a href="menu_15.html">Территории</a>
+					<ul>
+						<li id="big"><a href="menu_3.html" id="bigA">Кроноцкий заповедник</a></li>
+						<li id="big" class="lastli"><a href="menu_5.html" id="bigA">Южно-Камчатский заказник</a></li>
+					</ul>
+				</li>
+				<li><a href="menu_2.html">Фотоальбом</a></li>
+				<li style="width: 110px;">
+					<a href="menu_16.html">Карты</a>
+					<ul style="width: 110px;">
+						<li id="big"><a href="menu_4.html" id="bigA" style="padding: 7px 0px;">Кроноцкий заповедник</a></li>
+						<li id="big" class="lastli"><a href="menu_6.html" id="bigA" style="padding: 7px 0px;">Южно-Камчатский заказник</a></li>
+					</ul>
+				</li>
+				<li style="width: 232px;">
+					<a href="menu_17.html">Достопримечательности</a>
+					<ul style="width: 230px;">
+						<li id="big"><a href="menu_7.html" id="bigA">Долина Гейзеров</a></li>
+						<li id="big"><a href="menu_8.html" id="bigA">Кальдера вулкана Узон</a></li>
+						<li id="big"><a href="menu_9.html" id="bigA">Курильское озеро</a></li>
+						<li id="big"><a href="menu_10.html" id="bigA">Озеро Кроноцкое</a></li>
+						<li id="big" class="lastli"><a href="menu_11.html" id="bigA">Южно-Камчатский заказник</a></li>
+					</ul>
+				</li>
+				<li><a href="menu_12.html">Карта сайта</a></li>
+				<li><a href="menu_13.html">Статус</a></li>
+				<li><a href="menu_14.html">Маршруты</a></li>
+				<li style="width: 110px;">
+				<a href="menu_18.html" class="active">Статьи</a>
+				<ul style="width: 110px;">
+					<li id="big"><a href="menu_19.html" id="bigA">Лисы Камчадалы</a></li>
+					<li id="big"><a href="menu_20.html" id="bigA">Дешевый месяц</a></li>
+					<li id="big"><a href="menu_21.html" id="bigA" class="active">Медведи Камчатки</a></li>
+					<li id="big" class="lastli"><a href="menu_22.html" id="bigA">«Одного поля воды»</a></li>
+				</ul>
+				</li>
+				<li style="width: 160px;">
+					<a href="menu_23.html">Характеристики</a>
+					<ul style="width: 160px;">
+						<li id="big"><a href="menu_24.html" id="bigA">Климат</a></li>
+						<li id="big" class="lastli"><a href="menu_25.html" id="bigA">Рельеф и геология</a></li>
+						
+					</ul>
+				</li>
+				<li style="float:right"><a class="active">Кроноцкий заповедник</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+	<div class="modal">
+		<div class="modal-inside">
+			<span class="close" onclick="cls()">&times;</span>
+			<p id="mdl"></p>
+		</div>
+			<div class="modal-picture" style="margin: 13% 24%;">
+			<span style="position: absolute; margin-left: 24%;" class="close1" onclick="clsPic(1)">&times;</span>
+			<img src="../img/karta1.png">
+		</div>
+	</div>
+	<div id="sidebar">
+		<form name="registration">
+			<p class="formP">Фамилия-Имя:</p>
+			<input type="text" name="FI" value="Иванов Иван" onfocus="focusElem(3)" onblur="chck(3)" onchange="change(3)" class="inputTxt"><br>
+			<p class="formP">Номер телефона:</p>
+			<input type="text" name="cellphone" value="+7-000-000-00-00" onfocus="focusElem(1)" onblur="chck(1)" onchange="change(1)" class="inputTxt"><br>
+			<p class="formP">Электронная почта:</p>
+			<input type="text" name="email" value="example@mail.ru" onfocus="focusElem(2)" onblur="chck(2)" onchange="change(2)" class="inputTxt"><br><br>
+			<input type="button" id="agr" value="Подтвердить" onclick="agree()">
+			<input type="button" id="agr" value="Сброс" onclick="myreset()"><br>
+			<hr  color="#666">
+			<ul class="caption-style-4" id="minimap" onclick="page(5)">
+			<li>
+				<img src="../img/karta1.png" id="address" class="clickable-image">
+				<div class="caption">
+					<div class="blur" id="minimap"></div>
+					<div class="caption-text">
+						<h1>Карта</h1>
+					</div>
+				</div>
+			</li>
+			</ul>
+			<hr  color="#666">
+			<div id="datetime">
+				<a class="datetime" id="time1"></a><br>
+				<a class="datetime" id="date1"></a>
+			</div>
+		</form>
+	</div>
+	<div id="main">
+		<h1>Медведи Камчатки</h1>
+		<p class="mainP">
+		— Какова история проекта «Медведи Камчатки. Начало жизни»?
+		</p><p class="mainP">
+		— Каждому члену нашей команды давно хотелось снимать документальные фильмы о природе. Фотовыставки на эту тему у нас в стране есть и неплохие, а вот с документальными фильмами о дикой природе российского производства все довольно плачевно. У меня изначально была идея снять фильм про леса через персоналию, которая более чем хорошо с ними знакома, а именно — Игоря Шпиленка, инспектора Кроноцкого заповедника и замечательного фотографа-анималиста. У младшего брата Игоря — Дмитрия Шпиленка была в свою очередь задумка снять медвежат, наблюдая за ними в течение полного первого года их жизни. Что означает сделать то, что никто никогда не делал. Мы с Димой объединились, я — в качестве продюсера, он — режиссера, оператора-постановщика. Так родился проект «Медведи Камчатки. Начало жизни». Было решено не откладывать съемки на следующий год. Медведи уже вышли из берлог. Съемки начинаются уже в мае. Выход фильма запланирован на конец 2016 года.
+		</p>
+		<div class="container-a4" onclick="page(7)" style="margin-right: 4%;">
+		<ul class="caption-style-4">
+			<li>
+				<img src="../img/statya_4.jpg">
+				<div class="caption">
+					<div class="blur"></div>
+					<div class="caption-text">
+						<h1>Фотоальбом</h1>
+					</div>
+				</div>
+			</li>
+			</ul>
+		</div>
+		<p class="mainP">
+		— Чем ваш проект уникален, ведь и у нас когда-то снимали «В мире животных»?
+		</p><p class="mainP">
+		— Во всем мире еще не нашлось такого человека, который бы 8 месяцев подряд следил за одной медвежьей семьей. С одной стороны, это уникальный видеопроект, а с другой — научный проект: полученный материал будет интересен специалистам, занимающимся исследованием бурого медведя. Фильм «Медведи Камчатки. Начало жизни» позволит открыть тайны взросления только появившихся на свет медвежат, покажет процесс их знакомства с окружающим миром, постижения первых уроков мамы-медведицы, расскажет о первом опыте охоты. По итогам работы, помимо фильма, мы надеемся выпустить фотокнигу с научно-популярными текстами о поведении, характерах, взаимодействии взрослых медведей и медвежат в первый год жизни. Кстати, Валентин Сергеевич Пажетнов, автор уникальной методики по реабилитации медвежат-сирот, о которой Strana.ru писала в статье «Ясли для медвежонка», — наш научный консультант, хотя, конечно, камчатские медведи и центрально-европейские медведи имеют отличия.
+		</p><p class="mainP">
+		— Где пройдут съемки?
+		</p><p class="mainP">
+		— Съемки пройдут на Курильском озере и его окрестностях. Курильское озеро — один из самых значимых природных объектов Камчатки — находится на Южно-Камчатском федеральном заказнике. Курильское озеро известно как самое большое в Евразии нерестилище нерки. Во время нереста здесь собирается до 300-400 бурых медведей. Всего же на территории ЮКЗ обитает порядка 950 особей. Такая численность определена авиаучетами в 2012 году.
+		</p><p class="mainP">
+		— А вы уже знаете имя медведицы, которая будет сниматься в вашем фильме?
+		</p><p class="mainP">
+		— Нет, имен пока нет. Через 10 дней Дима улетает на Камчатку, где уже на месте и начнет искать своих героев. Возможно, Дима будет наблюдать не за одной семьей, а за несколькими, природа непредсказуема, никогда не знаешь, что и когда произойдет с животным.
+		</p>
+	</div>
+	<div id="clear"></div>
+	</div>
+	<div id="footer-c" class="bd">
+		<div id="footer">
+			<div id="footer-left">
+				<img src="../img/ecology.png" id="ecology">
+			</div>
+			<div id="footer-center">
+				<br><a onclick="analog(2)" target="_blank">Сайт-аналог <img src="../img/link.png" id="link"></a><br><br>
+				Оганесян Карен Арташесович<br>
+				Группа: МП31-14 / ID: 16
+			</div>
+			<div id="footer-right">
+				<!--#include virtual="../php/statistics.php"-->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
